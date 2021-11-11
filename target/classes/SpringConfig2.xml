@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+<!--Inheritance in beans-->
+ 	
+ 	<bean id="parentBean" class="com.cg.spring.core.demo.model.InhertBean">
+       	<property name="field1" value="value1"></property> 
+ 	</bean>
+ 	<bean id="childBean" parent="parentBean">
+       	<property name="field2" value="value2"/> 
+       	<property name="fieldN" value="valueN"></property> 
+ 	</bean>
+</beans>
